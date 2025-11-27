@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+.main {
+    min-height: 100vh;
+    max-width: 100vw;
+    z-index: 99;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#circule {
+    height: 600px;
+    width: clamp(300px, 680px, 80vw);
+    background-color: #fffcab;
+    position: absolute;
+    top: -150px;
+    left: 0;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+}
+
+.calculater {
+    background-color: white;
+    border-radius: 10px;
+    height: 460px;
+    width: 300px;
+    box-shadow: 0 0 8px 2px rgb(218, 218, 218);
+    overflow: hidden;
+}
+
+.calculater .top-container {
+    height: 34%;
+    width: 100%;
+    background-color: #01c6ad;
+    border-bottom-left-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    position: relative;
+}
+
+.calculater .top-container #inp1 {
+    width: 200px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    font-size: 1.1rem;
+    color: white;
+}
+
+.top-container p {
+    font-size: 3rem;
+    color: white;
+    position: absolute;
+    top: 42%;
+    left: 5%;
+}
+
+.calculater h2 {
+    font-size: 2rem;
+    font-weight: 500;
+    color: white;
+    margin-right: 40px;
+    height: 60px;
+}
+
+.bottom-container {
+    height: calc(100% - 34%);
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-areas: " .  . .  . "
+        " .  . .  .  "
+        " .  . .  .  "
+        " .  . .  .  "
+        " .  .  equal equal  "
+    ;
+    padding: 10px 0px;
+}
+
+.bottom-container button {
+    background-color: transparent;
+    border: none;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+.bottom-container #equal {
+    background-color: #01c6ad;
+    border-radius: 10px;
+    color: rgb(231, 231, 231);
+    border-bottom-left-radius: 50px;
+    grid-area: equal;
+}
+
+.btns {
+    color: #838383;
+}
+
+.sign {
+    color: #ffa600;
+}
